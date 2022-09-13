@@ -927,6 +927,35 @@
 	};
 #endif
 
+#if defined (APP_MINIEAP)
+	struct variable variables_minieapConf[] = {
+			{"minieap_enable", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_username", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_password", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_nic", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_module", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_daemonize", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_if-impl", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_max-fail", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_max-retries", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_no-auto-reauth", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_wait-after-fail", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_stage-timeout", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_auth-round", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_pid-file", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_log-file", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_hearbeat", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_eap-bcast-addr", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_dhcp-type", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_service", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_version-str", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_dhcp-script","", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_fake-serial","", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_max-dhcp-count","", NULL, EVM_RESTART_MINIEAP},
+			{0,0,0,0}
+	};
+#endif
+
 #if defined(APP_DNSFORWARDER)
 	struct variable variables_dnsforwarderConf[] = {
 			{"dns_forwarder_enable", "", NULL, EVM_RESTART_DNSFORWARDER},
