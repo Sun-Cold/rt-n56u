@@ -1994,15 +1994,18 @@ static int minieap_action_hook(int eid, webs_t wp, int argc, char **argv)
 {
 	int needed_seconds = 2;
 	char *action = websGetVar(wp, "connect_action", "");
+
 	if (!strcmp(action, "Reconnect")) {
 		notify_rc(RCN_RESTART_MINIEAP);
 	}
 	else if (!strcmp(action, "Disconnect")) {
 		notify_rc("stop_minieap");
 	}
+
 	websWrite(wp, "<script>restart_needed_time(%d);</script>\n", needed_seconds);
 	return 0;
 }
+
 static int minieap_status_hook(int eid, webs_t wp, int argc, char **argv)
 {
 	int status_code = pids("minieap");
@@ -4213,7 +4216,6 @@ static void
 do_minieap_log_file(const char *url, FILE *stream)
 {
 	dump_file(stream, "/tmp/minieap.log");
-	dump_file(stream, "/var/log/minieap.log");
 	fputs("\r\n", stream); /* terminator */
 }
 
@@ -4221,6 +4223,7 @@ static char minieap_log_txt[] =
 "Content-Disposition: attachment;\r\n"
 "filename=minieap.log"
 ;
+
 #endif
 
 #if defined (APP_KOOLPROXY)
