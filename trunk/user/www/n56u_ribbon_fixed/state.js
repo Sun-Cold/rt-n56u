@@ -403,8 +403,6 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 }
-if (found_app_minieap()){
-	tabtitle[14] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 if (found_app_adbyby()){
 	tabtitle[14] = new Array("", "<#menu5_20_1#>");
 }
@@ -466,11 +464,6 @@ if (found_app_mentohust()){
 	mentohust_array = new Array("","mentohust.asp","mentohust_log.asp");
 	tablink[13] = (mentohust_array);
 }
-if (found_app_minieap()){
-	minieap_array = new Array("","minieap.asp","minieap_log.asp");
-	tablink[14] = (minieap_array);
-}
-
 if (found_app_adbyby()){
 	ad_array = new Array("","Advanced_adbyby.asp");
 	tablink[14] = (ad_array);
@@ -521,10 +514,7 @@ if (found_app_shadowsocks()){
 } else menuL2_title.push("");
 
 if (found_app_mentohust()){
-	menuL2_title.push("<#menu5_18#>");
-} else menuL2_title.push("");
-if (found_app_minieap()){
-	menuL2_title.push("<#menu5_19#>");
+	menuL2_title.push("mentohust");
 } else menuL2_title.push("");
 
 if (found_app_koolproxy()){
@@ -573,10 +563,6 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	menuL2_link.push(mentohust_array[1]);
 } else menuL2_link.push("");
-if (found_app_minieap()){
-	menuL2_link.push(minieap_array[1]);
-} else menuL2_link.push("");
-
 if (found_app_adbyby()){
 	menuL2_link.push(ad_array[1]);
 } else if (found_app_koolproxy()){
