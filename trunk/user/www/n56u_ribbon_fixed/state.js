@@ -403,6 +403,9 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 }
+if (found_app_minieap()){
+	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
+}
 if (found_app_adbyby()){
 	tabtitle[14] = new Array("", "<#menu5_20_1#>");
 }
@@ -436,6 +439,7 @@ if (found_app_caddy()){
 if (found_app_wyy()){
 	tabtitle[18] = new Array("", "<#menu5_31_1#>");
 }
+
 //Level 3 Tab title
 
 tablink[0] = new Array("", "Advanced_Wireless2g_Content.asp", "Advanced_WGuest2g_Content.asp", "Advanced_WMode2g_Content.asp", "Advanced_ACL2g_Content.asp", "Advanced_WSecurity2g_Content.asp", "Advanced_WAdvanced2g_Content.asp");
@@ -463,6 +467,10 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	mentohust_array = new Array("","mentohust.asp","mentohust_log.asp");
 	tablink[13] = (mentohust_array);
+}
+if (found_app_minieap()){
+	minieap_array = new Array("","minieap.asp","minieap_log.asp");
+	tablink[14] = (minieap_array);
 }
 if (found_app_adbyby()){
 	ad_array = new Array("","Advanced_adbyby.asp");
@@ -517,6 +525,10 @@ if (found_app_mentohust()){
 	menuL2_title.push("mentohust");
 } else menuL2_title.push("");
 
+if (found_app_minieap()){
+	menuL2_title.push("<#menu5_19#>");
+} else menuL2_title.push("");
+
 if (found_app_koolproxy()){
 	menuL2_title.push("<#menu5_20#>");
 }else if (found_app_adbyby()){
@@ -563,6 +575,10 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	menuL2_link.push(mentohust_array[1]);
 } else menuL2_link.push("");
+if (found_app_minieap()){
+	menuL2_link.push(minieap_array[1]);
+} else menuL2_link.push("");
+
 if (found_app_adbyby()){
 	menuL2_link.push(ad_array[1]);
 } else if (found_app_koolproxy()){
