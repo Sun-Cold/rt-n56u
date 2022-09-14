@@ -933,25 +933,22 @@
 			{"minieap_username", "", NULL, EVM_RESTART_MINIEAP},
 			{"minieap_password", "", NULL, EVM_RESTART_MINIEAP},
 			{"minieap_nic", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_module", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_daemonize", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_if-impl", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_max-fail", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_max-retries", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_no-auto-reauth", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_wait-after-fail", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_stage-timeout", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_auth-round", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_pid-file", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_log-file", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_hearbeat", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_eap-bcast-addr", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_dhcp-type", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_ip", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_mask", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_gw", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_dns", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_pinghost", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_timeout", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_interval", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_restart_wait", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_maxfail", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_startmode", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_dhcp", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_daemon", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_ver", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_datafile", "", NULL, EVM_RESTART_MINIEAP},
+			{"minieap_dhcpscript", "", NULL, EVM_RESTART_MINIEAP},
 			{"minieap_service", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_version-str", "", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_dhcp-script","", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_fake-serial","", NULL, EVM_RESTART_MINIEAP},
-			{"minieap_max-dhcp-count","", NULL, EVM_RESTART_MINIEAP},
 			{0,0,0,0}
 	};
 #endif
@@ -1349,6 +1346,9 @@
 #if defined(APP_MENTOHUST)
 		{"mentohustConf",		variables_mentohustConf},
 #endif
+#if defined(APP_MINIEAP)
+		{"minieapConf",			variables_minieapConf},
+#endif
 #if defined(APP_SHADOWSOCKS)
 		{"ShadowsocksConf",		variables_ShadowsocksConf},
 #endif
@@ -1443,6 +1443,9 @@
 #endif
 #if defined(APP_MENTOHUST)
 		{EVM_RESTART_MENTOHUST,		EVT_RESTART_MENTOHUST,		RCN_RESTART_MENTOHUST,	0},
+#endif
+#if defined(APP_MINIEAP)
+		{EVM_RESTART_MINIEAP,		EVT_RESTART_MINIEAP,		RCN_RESTART_MINIEAP,	0},
 #endif
 #if defined(APP_TTYD)
 		{EVM_RESTART_TTYD,		EVT_RESTART_TTYD,		RCN_RESTART_TTYD,	0},
