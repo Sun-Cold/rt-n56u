@@ -1,3 +1,9 @@
+本仓库融合~~CV~~了[chongshengB](https://github.com/chongshengB/rt-n56u),[AutoCONFIG](https://github.com/AutoCONFIG/rt-n56u)(minieap),[xumng123](https://github.com/xumng123/rt-n56u)的源码
+
+### 特点 ###
+* 2022年暑假宁理装修顺便对校园网进行了一次**升级**，似乎导致[mentohust](https://github.com/hyrathb/mentohust)失效，因此添加了更新的[minieap](https://github.com/updateing/minieap)插件以对抗万恶的校园网
+* 更新了SSR+插件，以支持更多协议，方便平时检索外文资料
+* 
 ### 固件说明 ###
 * 默认登陆IP:192.168.2.1 
 * 默认用户名/密码:admin/admin
