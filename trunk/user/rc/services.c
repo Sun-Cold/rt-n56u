@@ -289,6 +289,34 @@ void restart_mentohust(void)
 
 #endif
 
+#if defined(APP_MINIEAP)
+
+int is_minieap_run(void)
+{
+	if(pids("minieap"))
+		return 1;
+	return 0;
+}
+void stop_minieap(void)
+{
+	eval("/usr/bin/minieap.sh","stop");
+}
+
+void start_minieap(void)
+{
+	int mode = nvram_get_int("minieap_enable");
+	if (mode == 1)
+		eval("/usr/bin/minieap.sh","start");
+}
+
+void restart_minieap(void)
+{
+	stop_minieap();
+	start_minieap();
+}
+
+#endif
+
 #if defined(APP_TTYD)
 void stop_ttyd(void){
 	eval("/usr/bin/ttyd.sh","stop");
@@ -807,6 +835,9 @@ doSystem("/usr/sbin/skipd -d /etc/storage/db");
 #if defined(APP_MENTOHUST)
 	start_mentohust();
 #endif
+#if defined(APP_MINIEAP)
+	start_minieap();
+#endif
 	return 0;
 }
 
@@ -835,6 +866,9 @@ stop_services(int stopall)
 #endif
 #if defined(APP_MENTOHUST)
 	stop_mentohust();
+#endif
+#if defined(APP_MINIEAP)
+	stop_minieap();
 #endif
 #if defined(APP_TTYD)
 	stop_ttyd();
