@@ -404,18 +404,18 @@ if (found_app_mentohust()){
 	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 }
 if (found_app_minieap()){
-	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
+	tabtitle[14] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 }
-if (found_app_adbyby()){
-	tabtitle[14] = new Array("", "<#menu5_20_1#>");
-}
-if (found_app_koolproxy()){
-	if (found_app_adbyby()){
-		tabtitle[14].push("<#menu5_26_1#>");
-	}else{
-	tabtitle[14] = new Array("", "<#menu5_26_1#>");
-	}
-}
+// if (found_app_adbyby()){
+// 	tabtitle[14] = new Array("", "<#menu5_20_1#>");
+// }
+// if (found_app_koolproxy()){
+// 	if (found_app_adbyby()){
+// 		tabtitle[14].push("<#menu5_26_1#>");
+// 	}else{
+// 	tabtitle[14] = new Array("", "<#menu5_26_1#>");
+// 	}
+// }
 if (found_app_smartdns()){
 	tabtitle[15] = new Array("", "<#menu5_29#>");	
 }else{
@@ -472,13 +472,13 @@ if (found_app_minieap()){
 	minieap_array = new Array("","minieap.asp","minieap_log.asp");
 	tablink[14] = (minieap_array);
 }
-if (found_app_adbyby()){
-	ad_array = new Array("","Advanced_adbyby.asp");
-	tablink[14] = (ad_array);
-}else if (found_app_koolproxy()){
-	kp_array = new Array("","Advanced_koolproxy.asp");
-	tablink[14] = (kp_array);
-}
+// if (found_app_adbyby()){
+// 	ad_array = new Array("","Advanced_adbyby.asp");
+// 	tablink[14] = (ad_array);
+// }else if (found_app_koolproxy()){
+// 	kp_array = new Array("","Advanced_koolproxy.asp");
+// 	tablink[14] = (kp_array);
+// }
 if (found_app_smartdns()){
 	smartdns_array = new Array("","Advanced_smartdns.asp");
 	tablink[15] = (smartdns_array);
@@ -529,11 +529,11 @@ if (found_app_minieap()){
 	menuL2_title.push("<#menu5_19#>");
 } else menuL2_title.push("");
 
-if (found_app_koolproxy()){
-	menuL2_title.push("<#menu5_20#>");
-}else if (found_app_adbyby()){
-	menuL2_title.push("<#menu5_20#>");
-} else menuL2_title.push("");
+// if (found_app_koolproxy()){
+// 	menuL2_title.push("<#menu5_20#>");
+// }else if (found_app_adbyby()){
+// 	menuL2_title.push("<#menu5_20#>");
+// } else menuL2_title.push("");
 
 if (found_app_smartdns()){
 	menuL2_title.push("<#menu5_29#>");
@@ -579,11 +579,11 @@ if (found_app_minieap()){
 	menuL2_link.push(minieap_array[1]);
 } else menuL2_link.push("");
 
-if (found_app_adbyby()){
-	menuL2_link.push(ad_array[1]);
-} else if (found_app_koolproxy()){
-	menuL2_link.push(kp_array[1]);
-} else menuL2_link.push("");
+// if (found_app_adbyby()){
+// 	menuL2_link.push(ad_array[1]);
+// } else if (found_app_koolproxy()){
+// 	menuL2_link.push(kp_array[1]);
+// } else menuL2_link.push("");
 if (found_app_smartdns()){
 	menuL2_link.push(smartdns_array[1]);
 } else if (found_app_adguardhome()){
