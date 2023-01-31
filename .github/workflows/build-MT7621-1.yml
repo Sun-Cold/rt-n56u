@@ -33,6 +33,11 @@ jobs:
         cd toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
+    - name: Set Golang
+      run: |
+        cd /opt/hostedtoolcache/go
+        rm -rf /opt/hostedtoolcache/go/1.14.12
+        mv 1.15.5 1.14.12
     - name: Build Firmware
       env:
         TNAME: "K2P-5.0 JCG-836PRO-5.0 JCG-AC860M-5.0 DIR-878-5.0 DIR-882-5.0 WR1200JS JCG-AC856M-5.0"
